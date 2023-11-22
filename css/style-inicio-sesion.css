@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        180deg,
+        white 0%,
+        rgb(236, 240, 241) 100%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+form {
+    background-image: url(img/logo.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    width: 420px;
+    text-align: center;
+    box-shadow: 0 0 20px rgb(0, 0, 0.2);
+}
+
+form img{
+    width: 70px;
+    margin-bottom: 25px;
+    border-radius: 25%;
+}
+
+.input-container{
+    position: relative;
+}
+
+
+.input-container > input{
+    padding: 20px 50px 20px 15px;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: 35px;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 16px;
+    outline: none;
+    color: black;
+
+}
+
+::placeholder{
+    color: black;
+    font-size: 16px;
+}
+
+form a{
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    background-color: black;
+    box-shadow: 0 0 10px rgb(0, 0, 0.2);
+}
+
+form p{
+    display: block;
+}
+
+.btn{
+    background-color: rgb(128, 139, 150);
+    padding: 14px 35px;
+    border: 0;
+    box-shadow: 0 0 20px black;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.success{
+    position: absolute;
+    top: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+.error{
+    position: absolute;
+    top: 50px;
+    color: red;
+    font-size: 20px;
+}

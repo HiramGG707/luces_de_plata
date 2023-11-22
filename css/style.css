@@ -1,0 +1,402 @@
+:root{
+    --primario: white;
+    --primario_oscuro: #F2F2F2;
+    --secundario:black;
+    --secundario_oscuro: rbg(233,287,2);
+    --blanco:#fff;
+    --negro:#000000fd;
+
+   /* --fuente_1ra: 'Staatliches', cursive;*/
+}
+html {
+    box-sizing: border-box;
+    font-size:62.5% ;
+}
+  *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+.header{
+    background-color:#ABB2B9;
+    display: flex; 
+    justify-content:flex-end;
+    align-items: center;
+    height: 85px;
+    padding: 5px 5%;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.header .logo{
+  margin-right: auto;
+}
+
+.header .logo img{
+    height: 60px;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 15%;
+}
+
+.header .logo img:hover{
+  transform: scale(1.2);
+}
+
+.header .logo a{
+  color: #ABB2B9;
+  display:inline-block;
+  padding: 20px 30px;
+}
+
+.header .nav-links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+.header .nav-links li{
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .nav-links a{
+  font-size: 700;
+  color: black;
+  text-decoration: none;
+}
+
+.header .nav-links li:hover{
+  transform: scale(1.1);
+}
+
+.header .nav-links li a:hover{
+  color: #3EC483;
+}
+
+.header .btn button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: black;
+    padding: 9px 25px;
+    background: #D8D8D8;
+    border: 5;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .header .btn button:hover{
+    background-color:black;
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  
+body .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+  }
+  
+  .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+  }
+  
+  .panel.active {
+    flex: 5;
+  }
+  
+  .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+      width: 100vw;
+    }
+  
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+      display: none;
+    }
+  }
+
+
+/** globales**/
+body{
+    background-color: var(--primario);  
+    font-size: 1.6rem;
+    line-height: 1.5;
+    padding-top: 80px;
+}
+
+body .nav-container{
+  list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+body .nav-container .img-carrito{
+  height: 45px;
+  width: auto;
+}
+
+body .nav-container .img-carrito:hover{
+  transform: scale(1.2);
+}
+
+/**
+body .nav-container .nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+**/
+body .nav-container .nav-links li{
+    text-decoration: none;
+    display: inline-block;
+    transform: translate(-50, 50);
+    padding: 0 20px;
+}
+
+body .nav-container .nav-links li:hover{
+    transform: scale(1.1);   
+}
+
+body .nav-container .nav-links li a{
+    color: black;
+}
+
+body .nav-container .nav-links li a:hover{
+    color: #3EC483;
+}
+
+p{
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+}
+a{text-decoration: none;}
+
+img{max-width: 100%;}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuente_1ra);
+}
+h1{font-size: 4rem;}
+h2{font-size: 3.2rem;}
+h3{font-size: 2.4rem;}
+/**header**/
+.header{
+    display: flex;
+    background-color: white;
+}
+
+
+.footer{
+    background-color: var(--primario_oscuro);
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+}
+.footer_text{
+    font-family: var(--fuente_1ra);
+    text-align: center;
+}
+
+
+.nav{
+    background-color: var(--primario_oscuro);
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.nav__links{
+ font-family: var(--fuente_1ra);
+ color: var(--blanco);
+ font-size: 3rem;   
+}
+.nav__links--activo,
+.nav__links:hover {
+    color: var(--secundario);
+}
+/* Grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width:768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/**Producto**/
+.producto{
+    background-color: var(--primario_oscuro);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+
+.producto img{
+    width: 410pxpx;
+    height: 430px;
+    border-radius: 20px;
+}
+
+.producto__nombre{
+    font-size: 4rem;
+}
+.producto__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+
+.button-comprar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-comprar button{
+  background-color: black;
+  color: white;
+  width: 100px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.button-comprar button:hover{
+  background-color: white;
+  color: black;
+}
+
+.producto__nombre,
+.producto__precio{
+    font-family: var(--fuente_1ra);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/**grafios */
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+.grafico--camisas{
+    background-image:url(https://laminadeplata.com/wp-content/uploads/2015/08/EDITADO-copia-2.jpg) ;
+    grid-row: 2/3;
+    border-radius: 15px;
+}
+.grafico--node{
+    background-image: url(https://images.unsplash.com/photo-1531995811006-35cb42e1a022?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGpveWVyaWElMjBkZSUyMHBsYXRhfGVufDB8fDB8fHww);
+    grid-row: 8/9;
+    border-radius: 15px;
+
+}
+@media (min-width:768px){
+    .grafico--node{
+        grid-row: 5/6;
+        grid-column: 2/4;
+}
+}
+/* nosotros */
+
+
+
+/*NOSOTROS*/
+.nosotros__contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+}
+
+.logo-nosotros{
+  text-align: center;
+  display: flex;
+  
+}
+.logo-nosotros img{
+  padding: 15px 80px 0 0;
+  width: 800px;
+  height: auto;
+  border-radius: 35px;
+}
+
+
+/*UBICACION*/
+.nosotros__contenedor{
+  text-align: center;
+  display: flex;
+  padding: 25px;
+}
+
+.ubicacion-logo{
+  display: flex;
+}
+.ubicacion-logo img{
+  padding: 15px 80px 0 15px;
+  width: 300px;
+  height: auto;
+  border-radius: 35px;
+}
+
+/*CUENTA*/
+.cerrar-sesion{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cerrar-sesion .button-cerrar-sesion{
+  display: block;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  margin-bottom: 25px;
+  border-radius: 50px;
+  padding: 15px ;
+  background-color: black;
+  box-shadow: 0 0 10px rgb(0, 0, 0.2);
+}
